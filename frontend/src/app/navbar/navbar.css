@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #F5E6D3;
+    height: 60px;
+    margin:0px;
+}
+
+.navbar-brand{
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
