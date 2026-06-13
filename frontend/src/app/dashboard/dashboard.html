@@ -1,8 +1,17 @@
 <body>
-    <section class="startseite">
-        <div class="willkomensbereich">
-            <h1>Willkommen zur Bloomly Party</h1>
-            <h2>verbleibende Zeit</h2>
-        </div>
-    </section>
+  <section class="startseite">
+    <div class="willkomensbereich">
+      <h1>Willkommen zur Bloomly Party</h1>
+      <h2>verbleibende Zeit</h2>
+      <div *ngIf="partyStarted">
+        {{countdown}}
+      </div>
+      <div *ngIf="!partyStarted" class="countdown">
+        <div>{{tage}} Tage</div>
+        <div>{{stunden}} Stunden</div>
+        <div>{{minuten}} Minuten</div>
+        <div>{{sekunden}} Sekunden</div>
+      </div>
+    </div>
+  </section>
 </body>
