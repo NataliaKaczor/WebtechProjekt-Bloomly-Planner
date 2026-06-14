@@ -2,16 +2,28 @@
   <section class="startseite">
     <div class="willkomensbereich">
       <h1>Willkommen zur Bloomly Party</h1>
-      <h2>verbleibende Zeit</h2>
+      <h2 class="untertitel">verbleibende Zeit</h2>
       <div *ngIf="partyStarted">
         {{countdown}}
       </div>
       <div *ngIf="!partyStarted" class="countdown">
-        <div>{{tage}} Tage</div>
-        <div>{{stunden}} Stunden</div>
-        <div>{{minuten}} Minuten</div>
-        <div>{{sekunden}} Sekunden</div>
-      </div>
+        <div class="zeit">
+          <h2 class="zahl">{{tage}}</h2> 
+          <p class="zeitUnterschrift">Tage</p>
+        </div>
+        <div class="zeit">
+          <h2 class="zahl">{{stunden}}</h2> 
+          <p class="zeitUnterschrift">Stunden</p>
+        </div>
+        <div class="zeit">
+          <h2 class="zahl">{{minuten}}</h2> 
+          <p class="zeitUnterschrift">Minuten</p>
+        </div>
+        <div class="zeit">
+          <h2 class="zahl">{{sekunden}}</h2> 
+          <p class="zeitUnterschrift">Sekunden</p>
+        </div>
+       </div>
     </div>
   </section>
 </body>

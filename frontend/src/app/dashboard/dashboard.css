@@ -1,6 +1,6 @@
 /* willkomens Bild  */
 .startseite {
-  height: 100vh; 
+  height: 100vh;
   background-image: url("/assets/startseite.jpg");
   background-size: cover;
   background-position: center;
@@ -10,46 +10,141 @@
   position: relative;
   color: azure;
 }
+
 /* Überschrift auf dem Bild  */
 .willkomensbereich {
-    font-family: 'Playfair Display', serif;
-    color: white;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-    text-align: center;
-}
-h1{
-    font-size: 5rem;
-    font-weight: 700;
-}
-h2{
-     font-size: 2rem;
-     font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.untertitel {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* container alle boxe*/
+.countdown {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+/* einzelne boxe */ 
+.zeit {
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 120px;
+}
+
+.zahl {
+  font-size: 3rem;
+}
+
+.zeitUnterschrift {
+  margin-top: 10px;
+}
 
 
 /* Responsive  */
-@media (max-width: 992px) {
-    h1 {
-        font-size: 4rem;
-        font-weight: 600;
-    }
-    h2{
-         font-size: 2rem;
-         font-weight: 400;
-    }
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+    font-weight: 650;
+  }
 
+  .untertitel {
+    font-size: 1.8rem;
+  }
+
+  .countdown {
+    gap: 20px;
+  }
+
+  .zeit {
+    width: 120px;
+    padding: 15px;
+  }
+
+  .zahl {
+    font-size: 2rem;
+  }
+
+  .zeitUnterschrift {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .untertitel {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .countdown {
+    gap: 20px;
+  }
+
+  .zeit {
+    width: 110px;
+    padding: 15px;
+  }
+
+  .zahl {
+    font-size: 2rem;
+  }
+
+  .zeitUnterschrift {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
-    h1 {
-        font-size: 3rem;
-        font-weight: 600;
-    }
-    h2{
-         font-size: 1rem;
-         font-weight: 400;
-    }
-}
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
 
+  .untertitel {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .countdown {
+    gap: 20px;
+  }
+
+  .zeit {
+    width: 90px;
+    padding: 10px;
+  }
+
+  .zahl {
+    font-size: 1.5rem;
+  }
+
+  .zeitUnterschrift {
+    font-size: 0.8rem;
+  }
+}
