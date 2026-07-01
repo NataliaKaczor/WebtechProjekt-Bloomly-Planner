@@ -1,3 +1,11 @@
+<h2>Gästeliste</h2>
 
+<input [(ngModel)]="neuerGastName" placeholder="Name eingeben">
+<button (click)="addGast()">Hinzufügen</button>
 
+<div *ngFor="let gast of gaeste">
 
+    <h3>{{ gast.vornameName }}</h3>
+    <p>{{ gast.status }}</p>
+
+</div>
