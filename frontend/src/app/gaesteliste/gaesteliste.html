@@ -1,11 +1,17 @@
-<h2>Gästeliste</h2>
+<section class="gaesteliste">
+    <div class="gaestelisteContainer">
+        <h2>Gästeliste</h2>
+        <div class="gastHinzufuegen">
+            <input [(ngModel)]="neuerGastName" placeholder="Name eingeben">
+            <button (click)="addGast()">Hinzufügen</button>
+        </div>
+        <div class="gaesteListe">
+            <div class="gastKarte" *ngFor="let gast of gaeste">
 
-<input [(ngModel)]="neuerGastName" placeholder="Name eingeben">
-<button (click)="addGast()">Hinzufügen</button>
+                <h3>{{ gast.vornameName }}</h3>
+                <p>{{ gast.status }}</p>
 
-<div *ngFor="let gast of gaeste">
-
-    <h3>{{ gast.vornameName }}</h3>
-    <p>{{ gast.status }}</p>
-
-</div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+.gaesteliste {
+    min-height: 100vh;
+    background-color: #f8f3ef;
+    padding: 80px 10px;
+}
+
+.gaestelisteContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gaesteliste h1 {
+    font-size: 36px;
+    color: #4d3b36;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gastHinzufuegen {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.gastHinzufuegen input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d8cfc7;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.gastHinzufuegen button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8c6f61;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gastHinzufuegen button:hover {
+    background-color: #73584d;
+}
+
+.gaesteListe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.gastKarte {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
