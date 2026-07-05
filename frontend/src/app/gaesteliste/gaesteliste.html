@@ -1,20 +1,34 @@
 <section class="gaesteliste">
-    <div class="gaestelisteContainer">
-        <h2>Gästeliste</h2>
-        <div class="gastHinzufuegen">
-            <input [(ngModel)]="neuerGastName" placeholder="Name eingeben">
-            <button (click)="addGast()">Hinzufügen</button>
-        </div>
-        <div class="gaesteListe">
-            <div class="gastKarte" *ngFor="let gast of gaeste">
-
-                <h3>{{ gast.vornameName }}</h3>
-                <p>{{ gast.status }}</p>
-
-                <div class="">
-                    <button (click)="deleteGast(gastid)">Löschen</button>
-                </div>
-            </div>
-        </div>
+  <div class="gaestelisteContainer">
+    <h2>Gästeliste</h2>
+    <div class="gastHinzufuegen">
+      <input [(ngModel)]="neuerGastName" placeholder="Name eingeben">
+      <button (click)="addGast()">Hinzufügen</button>
     </div>
+    <div class="gaesteListe">
+      <div class="gastKarte" *ngFor="let gast of gaeste">
+
+        <h3>{{ gast.vornameName }}</h3>
+        <p>{{ gast.status }}</p>
+
+        <button (click)="openModal(gast)">Status ändern</button>
+        <button (click)="deleteGast(gast.id)">Löschen</button>
+
+      </div>
+    </div>
+  </div>
 </section>
+<div class="modalFenster" *ngIf="showModal">
+
+  <div class="modalInhalt">
+
+    <h2>Status ändern</h2>
+    <h3>{{ selectedGast?.vornameName }}</h3>
+
+    <button (click)="updateStatus('offen')">Offen</button>
+    <button (click)="updateStatus('zugesagt')"> Zusagen</button>
+    <button (click)="updateStatus('abgesagt')">Absagen </button>
+    <button (click)="showModal = false"> Abbrechen</button>
+
+  </div>
+</div>

@@ -50,7 +50,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 100%;
-    
+
 }
 
 .gastKarte {
@@ -61,15 +61,42 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+.modalFenster {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modalInhalt {
+    background: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 /* Responsive  */
 @media (max-width: 1200px) {
-  .gaesteListe{  grid-template-columns: repeat(2, 1fr)}
+    .gaesteListe {
+        grid-template-columns: repeat(2, 1fr)
+    }
 }
 
 @media (max-width: 992px) {
-  .gaesteListe{ grid-template-columns: repeat(2, 1fr);}
+    .gaesteListe {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 576px) {
-  .gaesteListe{ grid-template-columns: 1fr;}
+    .gaesteListe {
+        grid-template-columns: 1fr;
+    }
 }

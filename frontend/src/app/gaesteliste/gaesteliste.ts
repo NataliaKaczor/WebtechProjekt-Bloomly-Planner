@@ -27,7 +27,7 @@ export class Gaesteliste {
       console.log('Name leer');
       return;
     }
-    
+
     const neuerGast: Gast = {
       id: this.gastid,
       vornameName: this.neuerGastName,
@@ -43,12 +43,32 @@ export class Gaesteliste {
   deleteGast(id: number) {
     for (let i = 0; i < this.gaeste.length; i++) {
       if (this.gaeste[i].id === id) {
-        this.gaeste.splice(i, 1);
         console.log('Gast' + this.gaeste[i].vornameName + ' erfolgreich gelöscht')
+        this.gaeste.splice(i, 1);
         break;
       }
     }
   }
+
+  showModal = false; 
+  selectedGast: Gast | null = null 
+
+  openModal(gast :Gast){
+    console.log(' modal sichtbar')
+    this.selectedGast = gast; 
+    this.showModal = true; 
+  }
+
+  updateStatus( neuerStatus: 'offen' | 'zugesagt' | 'abgesagt')
+  {
+    if(!this.selectedGast) return; 
+    this.selectedGast.status = neuerStatus; 
+    this.showModal = false; 
+    console.log('neuer Status von' + this.selectedGast.vornameName + ' : ' + this.selectedGast.status )
+
+  }
+  
+
 
 
 
