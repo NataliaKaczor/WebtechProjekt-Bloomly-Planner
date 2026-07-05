@@ -50,12 +50,26 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 100%;
+    
 }
 
 .gastKarte {
+    width: 100%;
     background: white;
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive  */
+@media (max-width: 1200px) {
+  .gaesteListe{  grid-template-columns: repeat(2, 1fr)}
+}
+
+@media (max-width: 992px) {
+  .gaesteListe{ grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (max-width: 576px) {
+  .gaesteListe{ grid-template-columns: 1fr;}
 }
