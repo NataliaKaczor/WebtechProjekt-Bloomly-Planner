@@ -19,16 +19,15 @@ export class Gaesteliste {
   ];
 
   neuerGastName: string = '';
-  gastid: number= 4; 
+  gastid: number = 4;
 
   addGast() {
-    
+
     if (!this.neuerGastName) {
       console.log('Name leer');
-      return; 
+      return;
     }
     
-
     const neuerGast: Gast = {
       id: this.gastid,
       vornameName: this.neuerGastName,
@@ -39,8 +38,17 @@ export class Gaesteliste {
     this.gastid++; // eindeutige ID
     this.neuerGastName = '';
     console.log('Gast erfolgreich hinzugefügt')
-  }; 
+  };
 
+  deleteGast(id: number) {
+    for (let i = 0; i < this.gaeste.length; i++) {
+      if (this.gaeste[i].id === id) {
+        this.gaeste.splice(i, 1);
+        console.log('Gast' + this.gaeste[i].vornameName + ' erfolgreich gelöscht')
+        break;
+      }
+    }
+  }
 
 
 
