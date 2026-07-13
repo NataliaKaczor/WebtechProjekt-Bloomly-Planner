@@ -11,9 +11,14 @@
         <h3>{{ gast.vornameName }}</h3>
         <p>{{ gast.status }}</p>
 
-        <button (click)="openModal(gast)">Status ändern</button>
-        <button (click)="deleteGast(gast.id)">Löschen</button>
-
+        <div class="buttonContainer">
+          <button class="statusButton" (click)="openModal(gast)">
+            Status ändern
+          </button>
+          <button class="deleteButton" (click)="deleteGast(gast.id)">
+            Löschen
+          </button>
+        </div>
       </div>
     </div>
   </div>
